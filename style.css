@@ -1,0 +1,324 @@
+@import url('https://fonts.googleapis.com/css2?family=Jura:wght@300..700&family=Titillium+Web&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Slab:ital,wght@0,100..700;1,100..700&family=Jura:wght@300..700&family=Titillium+Web&display=swap');
+
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+nav {
+font-family: "Jura", sans-serif;
+  font-optical-sizing: auto;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.titulo-acomodacao{
+    font-family: "Josefin Slab", serif;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    background-color: rgba(11, 17, 17, 0.8);
+    padding: 10px 0px 10px 0px;
+}
+
+.titulo-index{
+    font-family: "Josefin Slab", serif;
+    font-weight: bold;
+    font-size: 75px;
+    color: white;
+    text-align: center;
+}
+
+.container-dois{
+    background-color: rgb(180,155,44,0.25);
+    font-family: "Jura", sans-serif;
+}
+
+.lista{
+    list-style: none;
+    padding-top: 20px;
+}
+
+.frase{
+    font-size: 43px;
+    text-align: justify;
+    padding: 100px 80px 100px 80px;
+}
+
+h2{
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    padding: 80px 70px 0px 100px;
+}
+
+li{
+    font-size: 20px;
+}
+
+.col-lista1{
+    padding-left: 30px;
+}
+
+h4{
+    font-family: "Jura", sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+    color: white;
+}
+
+#button{
+    font-family: "Jura", sans-serif;
+    border-radius: 40px;
+    border-color: white;
+    width: 100%;
+}
+
+#button1{
+    font-family: "Jura", sans-serif;
+    border-radius: 40px;
+    border-color: white;
+    padding: 10px 40px 10px 40px ;
+}
+
+#destinos{
+    background-color: rgb(180,155,44,0.25);;
+}
+
+#button2{
+    font-family: "Jura", sans-serif;
+    color: black;
+    border-radius: 40px;
+    border-color: rgb(0, 0, 0);
+    background-color: transparent;
+    padding: 10px 40px 10px 40px ;
+}
+
+.textos, .textos2{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+#texto-pai, #texto-pai2, #container-blog{
+    justify-content: center;
+    align-items: center;
+}
+
+#footer{
+    font-family: "Jura", sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+    padding-top: 15px;
+}
+
+.textos3{
+    text-align: center;
+    padding: 30px 0px 30px 0px ;
+}
+
+.container hr {
+    width: 100%;
+    border: 1px solid black;
+    height: 300px;
+    opacity: 1;
+}
+
+#navcontato{
+    font-family: "Josefin Slab", serif;
+    font-size: 25px;
+    font-weight: bold;
+    color: white;
+}
+
+.frase-contato{
+    font-family: "Jura", sans-serif;
+    font-size: 25px;
+    font-weight: bold; 
+    text-align: center;  
+    color: white;
+}
+
+#p2 {
+    font-family: "Jura", sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: white; 
+    text-align: right;
+}
+
+/* --- OVERLAY DE FUNDO (Transparência em toda a área da imagem) --- */
+/* 1. Torna o container de fundo (que tem a imagem) um ponto de referência */
+.background-cover {
+    background: url('../imagens/pexels-jeremy-bishop-1260133-20146347 2.png'); /* Corrigindo o caminho para ser relativo ao CSS */
+    
+    /* PROPRIEDADES DE AJUSTE DA IMAGEM */
+    background-size: cover;      /* ESSENCIAL: Garante que a imagem cubra toda a área, cortando o excesso se necessário */
+    background-position: center; /* Centraliza a imagem */
+    
+    position: relative; 
+}
+
+/* 2. Cria o pseudo-elemento (o overlay) que cobre 100% da área */
+.background-cover::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.55);
+    /* Coloca esta camada ABAIXO do conteúdo principal (o formulário e a frase) */
+    z-index: 1; 
+}
+
+/* 3. Garante que o conteúdo PRINCIPAL (a row com o formulário e a frase) fique acima do overlay */
+/* Se este seletor for muito específico, use apenas .row */
+.container-fluid .container .row {
+    position: relative; /* ESSENCIAL para que o z-index funcione */
+    z-index: 2; /* Move o conteúdo para uma camada acima do overlay (z-index: 1) */
+}
+
+
+/* --- Estilo da Caixa da Frase (Opcional, mas melhora o contraste) --- */
+.overlay-box {
+    z-index: 2; /* Garante que a caixa de frase esteja no topo */
+    position: relative;
+    /* Mantenha suas outras regras aqui */
+}
+
+/* 1. Garante que o container de Locais seja um ponto de referência e ajuste a imagem */
+.background-cover-locais {
+    background: url(imagens/pexels-alex-andrews-271121-1203808\ 2.png);
+    /* (Mantenha as regras background-size, background-position, etc., que você já tem aqui) */
+    background-size: cover;      /* Garante o ajuste da imagem */
+    background-position: center; /* Centraliza a imagem */
+    
+    position: relative; /* ESSENCIAL para o pseudo-elemento */
+}
+
+/* 2. Cria o pseudo-elemento (o overlay) específico para a página de Locais */
+.background-cover-locais::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(30, 30, 30, 0.81); 
+    /* Coloca esta camada ABAIXO do conteúdo principal */
+    z-index: 1; 
+}
+
+/* 3. Garante que o conteúdo (formulário e mapa) fique ACIMA do overlay */
+/* Este seletor já deve estar no seu CSS anterior, mas vale a pena reforçar a hierarquia */
+.container-fluid .container .row {
+    position: relative; 
+    z-index: 2; 
+}
+
+#formulario{
+    background-color: black;
+    color: white;
+    font-family: "Jura", sans-serif;
+    font-size: 20px;
+    border-radius: 30px;
+    padding: 40px;
+
+}
+
+#formulario-cidade{
+
+    background-color: rgba(217, 217, 217, 1);
+    color: rgb(0, 0, 0);
+    font-family: "Jura", sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+    border-radius: 30px;
+    padding: 60px;
+}
+
+.map-container {
+    min-height: 450px; 
+    width: 100%;
+}
+
+#mapa-frame {
+    height: 100%;
+    border-radius: 10px; /* Opcional: para combinar com o estilo do formulário */
+}
+
+.destaque{
+    color: rgba(104, 105, 49, 1);
+}
+
+.card-title{
+    font-family: "Jura", sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.card-text{
+    font-family: "Jura", sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.cards{
+    font-family: "Jura", sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: left;
+}
+
+.card{
+    width: 18rem; 
+    border-radius: 35px; 
+    border: none; 
+    box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.30);
+    padding: 15px 15px 15px 15px;
+    width: auto;
+    margin-bottom: 35px;
+}
+
+.card-img-top {
+    border-radius: 15px 15px 15px 15px;
+    /* IMAGEM PREENCHE ESPAÇO E NAO DEFORMA*/
+    object-fit: cover; 
+    height: 12rem;
+}
+
+#botao-card{
+
+    font-family: "Jura", sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    display: block; 
+    width: 100px; 
+    margin: 10px auto;
+}
+
+.secao-principal{
+    height: 100vh; 
+    background-image: url('../imagens/pexels-lureofadventure-28365967 2.png');
+    background-size: cover;
+    background-position: top center; 
+}
+
+.icone-container-seta {
+    position: absolute; 
+    bottom: 30px; 
+    right: 30px;
+}
+
+.icone-container-seta2 {
+    position: absolute; 
+    bottom: 30px; 
+    left: 30px;}
+
+    #map {
+    /* PARA NAO EXIBIR O MAPA LOGO QUE CARREGAR A PAGINA */
+    display: none; }

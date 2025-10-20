@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="pt">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Living Around</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+  </head>
+
+    <!-- SECÇÃO NAVBAR -->
+    <nav class="navbar navbar-expand-sm bg-transparent position-absolute top-0 start-0 w-100 z-3" id="navcontato">
+  <div class="container-fluid">
+    <!-- logomarca da navbar -->
+    <a class="navbar-brand" href="../index.html">
+        <img src="../imagens/lines-leaning-solid 1.png" alt="Bootstrap" width="59" height="60">
+    </a>
+    <!-- botão de dropdown que dá responsividade a navbar -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" 
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav ms-auto gap-4">
+        <a class="nav-link active text-white" href="acomodacao.html">ACOMODAÇÃO</a>
+        <a class="nav-link text-white" href="locais.html">LOCAIS</a>
+        <a class="nav-link text-white" href="../index.html#container-blog">BLOG</a>
+        <a class="nav-link text-white" href="contato.html">CONTATOS</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+    <!-- CONTAINER PRINCIPAL COM BACKGROUND OCUPANDO TODA A TELA "min-viewport height-100"-->
+      <div class="container-fluid background-cover d-flex align-items-center min-vh-100">
+        <!-- padding top e bottom maximo para responsividade em telas pequenas(py) -->
+        <div class="container py-5">
+            <div class="row align-items-center" style="position: relative; z-index: 2;">
+
+            <!-- CONTAINER ESQUERDA: formulário -->
+            <div class="col-12 col-md-6 d-flex justify-content-center" style="margin-top: 75px;">
+            <div class="box" id="formulario">
+            <form name="formulario" onsubmit="return validar(this)">
+            
+            <div class="mb-3"> 
+                <label for="inputnome" name="nome" class="form-label custom-label-style">Nome:</label>
+                <div> 
+                    <input type="text" class="form-control" id="inputnome">
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label for="email" name="email" class="form-label custom-label-style">Email:</label>
+                <div>
+                    <input type="email" class="form-control" id="email">
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label for="form-textarea" name="mensagem" class="form-label custom-label-style">Mensagem:</label>
+                <div>
+                    <textarea class="form-control" id="form-textarea" rows="4" style="resize: none;"></textarea>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <button type="submit" id="button" style="background-color: black; color: white;" value="ENVIAR">Enviar</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+            <!-- CONTAINER DIREITA: frase -->
+            <div class="col-12 col-md-6 d-flex">
+              <div class="overlay-box">
+                <p class="frase-contato">"Viajar é descobrir que todos estão errados sobre outros países."</p>
+                <p id="p2">- Aldous Huxley </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../script/script.js"></script>
+  </body>
+</html>
