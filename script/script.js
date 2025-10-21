@@ -11,7 +11,7 @@ function atualizarCidades() {
     
     const paisSelecionado = selectPais.value;
 
-    // LIMPA A LISTA E ADICIONA OPCAO PADRAO
+    // LIMPA A LISTA E ADICIONA OPCAO PADRAO(PAIS/CIDADE)
     selectCidade.innerHTML = '<option selected value="">Cidade</option>'; 
     
     // Verifica se um país válido foi selecionado
@@ -37,7 +37,7 @@ function abrirMapa() {
     const pais = selectPais.value;
     const cidade = selectCidade.value;
 
-    // Validação
+    // VERIFICA SE O USUARIO REALMENTE ESCOLHEU UM PAIS E UMA CIDADE
     if (!pais || !cidade) {
         alert("Por favor, selecione um País e uma Cidade válidos.");
         // Limpa o mapa se a seleção for inválida
@@ -56,17 +56,18 @@ function abrirMapa() {
     var mapaDiv = document.getElementById('map');
 
     // TORNA A DIV DO MAPA VISÍVEL
-    mapaDiv.style.display = 'block'; // Ou 'flex', dependendo do seu layout
+    mapaDiv.style.display = 'block';
 }
 
 
 
-// Chame esta função uma vez no início para garantir que o mapa esteja vazio ou em um local padrão.
+// FUNCAO PARA QUE O MAPA NAO APAREÇA LOGO QUE CARREGUE A PAGINA
 document.addEventListener('DOMContentLoaded', () => {
-    // Isso garante que a lista de cidades está vazia e o mapa está 'limpo' ao carregar.
     atualizarCidades(); 
 });
 
+
+// FUNCAO PARA VALIDAR EMAIL DO FORMULARIO E ENVIAR UM ALERTA APOS PREENCHIMENTO
 function validar(){
 
         
