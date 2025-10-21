@@ -1,0 +1,33 @@
+.background-cover-locais {
+    background: linear-gradient(rgba(0, 0, 0, 0.81), rgba(0, 0, 0, 0.81)), /* camada escura */
+    url(../imagens/pexels-alex-andrews-271121-1203808\ 2.png);
+    /* (Mantenha as regras background-size, background-position, etc., que você já tem aqui) */
+    background-size: cover;      /* Garante o ajuste da imagem */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat;
+}
+
+#formulario-cidade{
+
+    background-color: rgba(217, 217, 217, 1);
+    color: rgb(0, 0, 0);
+    font-family: "Jura", sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+    border-radius: 30px;
+    padding: 60px;
+}
+
+.map-container {
+    min-height: 450px; 
+    width: 100%;
+}
+
+#mapa-frame {
+    height: 100%;
+    border-radius: 10px; /* Opcional: para combinar com o estilo do formulário */
+}
+
+#map {
+    /* PARA NAO EXIBIR O MAPA LOGO QUE CARREGAR A PAGINA */
+    display: none; }

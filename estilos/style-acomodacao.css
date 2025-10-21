@@ -1,0 +1,62 @@
+.titulo-acomodacao{
+    font-family: "Josefin Slab", serif;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    background-color: rgba(11, 17, 17, 0.8);
+    padding: 10px 0px 10px 0px;
+}
+
+.card-title{
+    font-family: "Jura", sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.card-text{
+    font-family: "Jura", sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.cards{
+    font-family: "Jura", sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: left;
+}
+
+.card{
+    width: 18rem; 
+    border-radius: 35px; 
+    border: none; 
+    box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.30);
+    padding: 15px 15px 15px 15px;
+    width: auto;
+    margin-bottom: 35px;
+}
+
+.card-img-top {
+    border-radius: 15px 15px 15px 15px;
+    /* IMAGEM PREENCHE ESPAÇO E NAO DEFORMA*/
+    object-fit: cover; 
+    height: 12rem;
+}
+
+#botao-card{
+
+    font-family: "Jura", sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    display: block; 
+    width: 100px; 
+    margin: 10px auto;
+}
+
+.secao-principal{
+    height: 100vh; 
+    background-image: url('../imagens/pexels-lureofadventure-28365967 2.png');
+    background-size: cover;
+    background-position: top center; 
+}

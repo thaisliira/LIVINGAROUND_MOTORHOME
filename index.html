@@ -31,71 +31,73 @@
 
 <!-- CONTAINER TOPO -->
 <div class="container-fluid hero position-relative px-0">
-  <img src="imagens/Hero.png" class="img-fluid w-100" alt="Responsive image">
-
-<div class="titulo position-absolute top-50 start-50 z-3 translate-middle">
+  <img src="imagens/Hero.png" class="img-fluid" alt="Responsive image">
+    <div class="titulo position-absolute top-50 start-50 z-3 translate-middle">
     <h1 class="titulo-index">LIVING AROUND</h1>
-</div>
+    </div>
 </div>
 
 <!-- SEGUNDO CONTAINER -->
- <div class="container-dois">
-  <div class="row">
+ <div class="container-fluid" id="container-dois">
+  <div class="row g-0"> 
+
+    <!-- COLUNA DA ESQUERDA -->
     <div class="col esquerda">
       <p class="frase">Viva <span class="destaque">livre</span>, trabalhe de qualquer lugar, descubra o <span class="destaque">mundo</span>.</p>
     </div>
-    <div class="container col-auto">
-                <hr />
+    <div class="col-auto"> 
+        <hr />
     </div>
+
+    <!-- COLUNA DA DIREITA -->
     <div class="col direita">
       <h2>Trabalhos Remotos</h2> 
-      <!-- LISTA NAO ORDENADA -->
       <div class="row-box row">
         <div class="col-6 lista1">
-      <ul class="lista">
-        <li>Indeed</li>
-        <li>Linkedin</li>
-        <li>JobRemote</li>
-        <li>GoogleJobs</li>
-      </ul>
+          <ul class="lista">
+            <li>Indeed</li>
+            <li>Linkedin</li>
+            <li>JobRemote</li>
+            <li>GoogleJobs</li>
+          </ul>
         </div>
-      <div class="col-6 lista2"> 
-      <ul class="lista">
-        <li>Indeed</li>
-        <li>Linkedin</li>
-        <li>JobRemote</li>
-        <li>GoogleJobs</li>
-      </ul>   
+        <div class="col-6 lista2"> 
+          <ul class="lista">
+            <li>Indeed</li>
+            <li>Linkedin</li>
+            <li>JobRemote</li>
+            <li>GoogleJobs</li>
+          </ul>   
+        </div>
+      </div>
     </div>
   </div>
- </div>
-</div>
 </div>
 
 <!-- TERCEIRO CONTAINER -->
 <div class="container-fluid px-0">
-  <div class="row d-flex h-100">
+  <div class="row d-flex g-0">
     <div class="col-5 px-0">
       <img src="imagens/pexels-gya-den-768256-2303781 2.png" class="img-fluid w-100 h-100" alt="Responsive image">
     </div>
-    <div class="col-7 px-0 d-flex bg-dark position-relative" id="texto-pai">
-      <div class="textos">
-      <h4>Descubra o seu novo escritório</h4>
-      <button type="button" class="btn btn-dark" id="button1">Descobrir</button>
-      </div>
-      <div class="icone-container-seta">
-        <a href="#" class="icone-link">
+        <div class="col-7 px-0 d-flex bg-dark position-relative" id="texto-pai">
+          <div class="textos">
+          <h4>Descubra o seu novo escritório</h4>
+          <button type="button" class="btn btn-dark" id="button1">Descobrir</button>
+          </div>
+        <div class="icone-container-seta">
+          <a href="#" class="icone-link">
           <span class="material-symbols-outlined" style="color: white; font-size:50px;">
-              arrow_circle_up
+          arrow_circle_up
           </span></a>
-      </div>
-    </div>
+        </div>
+        </div>
   </div>
 </div>
 
 <!-- QUARTO CONTAINER -->
  <div class="container-fluid px-0">
-  <div class="row d-flex h-100">
+  <div class="row d-flex g-0">
     <div class="col-7 px-0 d-flex position-relative" id="texto-pai2" style="background-color: rgb(180,155,44,0.25);;">
       <div class="textos2">
       <h4 style="color: rgb(0, 0, 0);">Temos destinos especiais para você</h4>
@@ -130,12 +132,17 @@
 
  <!-- CONTAINER FOOTER -->
   <div class="container-fluid px-0 bg-dark">
-    <div class="row d-flex h-100"></div>
     <div class="textos3">
       <h4 style="padding-bottom: 15px;">LIVING AROUND</h4>
-      <i class="fa-brands fa-square-facebook" style="font-size: 57px; color:rgba(255, 255, 255, 0.4);"></i>
+      <a href="https://www.facebook.com/" target="_blank">
+      <i class="fa-brands fa-square-facebook" style="font-size: 57px; color: rgba(255, 255, 255, 0.4);"></i>
+      </a>
+      <a href="https://www.instagram.com/" target="_blank">
       <i class="fa-brands fa-square-instagram" style="font-size: 57px; color: rgba(255, 255, 255, 0.4);"></i>
+      </a>
+      <a href="https://twitter.com/" target="_blank">
       <i class="fa-brands fa-square-x-twitter" style="font-size: 57px; color: rgba(255, 255, 255, 0.4);"></i>
+      </a>
       <p id="footer">Power by Cesae Digital</p>    
     </div>
   </div>

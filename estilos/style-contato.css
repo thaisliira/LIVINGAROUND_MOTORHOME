@@ -1,0 +1,25 @@
+#navcontato{
+    font-family: "Josefin Slab", serif;
+    font-size: 25px;
+    font-weight: bold;
+    color: white;
+}
+
+.frase-contato{
+    font-family: "Jura", sans-serif;
+    font-size: 25px;
+    font-weight: bold; 
+    text-align: center;  
+    color: white;
+}
+
+.background-cover {
+  background: 
+    linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), /* camada escura */
+    url('../imagens/pexels-jeremy-bishop-1260133-20146347 2.png'); /* imagem de fundo */
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+}
