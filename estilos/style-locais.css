@@ -40,4 +40,9 @@
 /* NOVO: Para ocultar o bloco de informações de contato */
 #info-contato {
     display: none;
+    font-family: "Jura", sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+    color: white;
+    background-color: black;
 }

@@ -7,24 +7,24 @@ const destinosSuportados = {
 // NOVO: Informações Detalhadas para cada destino (Chave: "Cidade, País")
 const informacoesLocais = {
     'Rio de Janeiro, Brasil': {
-        nome: 'Ponto de Apoio Copacabana',
-        endereco: 'Av. Nossa Senhora de Copacabana, 500',
-        email: 'rio@livingaround.com'
+        nome: 'Living Around - RJ',
+        endereco: 'Rua da Alegria, 666 4000-789 - Rio de Janeiro',
+        email: 'livingaround_rio@living.com'
     },
     'Recife, Brasil': {
-        nome: 'Escritório Central de Pernambuco',
-        endereco: 'Rua do Bom Jesus, 197',
-        email: 'recife@livingaround.com'
+        nome: 'Living Around - PE',
+        endereco: 'Rua da Alegria, 666 4000-789 - Recife',
+        email: 'livingaround_recife@living.com'
     },
     'Porto, Portugal': {
-        nome: 'Sede Living Around Porto',
-        endereco: 'Rua das Flores, 201',
-        email: 'porto@livingaround.com'
+        nome: 'Living Around - OPO',
+        endereco: 'Rua da Alegria, 666 4000-789 - Porto',
+        email: 'livingaround_porto@living.com'
     },
     'Lisboa, Portugal': {
-        nome: 'Ponto de Encontro Chiado',
-        endereco: 'Largo do Chiado, 5',
-        email: 'lisboa@livingaround.com'
+        nome: 'Living Around - LIS',
+        endereco: 'Rua da Alegria, 666 4000-789 - Lisboa',
+        email: 'livingaround_porto@living.com'
     },
 };
 
