@@ -20,14 +20,24 @@
 
 .map-container {
     min-height: 450px; 
-    width: 100%;
+    /* REMOVIDO: width: 50%; (Deixe o max-width do HTML gerenciar) */
+}
+
+.map-container {
+    min-height: 450px; 
+    /* REMOVER width: 50%; se ainda estiver aqui */
+    /* Adicionar overflow: hidden para cortar qualquer excesso */
+    overflow: hidden; 
 }
 
 #mapa-frame {
-    height: 100%;
-    border-radius: 10px; /* Opcional: para combinar com o estilo do formulário */
+    /* Altura e Largura de 100% garantem o preenchimento do container (min-height: 450px e max-width: 450px) */
+    height: 100%; 
+    width: 100%; 
+    border-radius: 10px; 
 }
 
-#map {
-    /* PARA NAO EXIBIR O MAPA LOGO QUE CARREGAR A PAGINA */
-    display: none; }
+/* NOVO: Para ocultar o bloco de informações de contato */
+#info-contato {
+    display: none;
+}

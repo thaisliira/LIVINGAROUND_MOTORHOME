@@ -4,6 +4,30 @@ const destinosSuportados = {
     'Portugal': ['Porto', 'Lisboa'],
 };
 
+// NOVO: Informações Detalhadas para cada destino (Chave: "Cidade, País")
+const informacoesLocais = {
+    'Rio de Janeiro, Brasil': {
+        nome: 'Ponto de Apoio Copacabana',
+        endereco: 'Av. Nossa Senhora de Copacabana, 500',
+        email: 'rio@livingaround.com'
+    },
+    'Recife, Brasil': {
+        nome: 'Escritório Central de Pernambuco',
+        endereco: 'Rua do Bom Jesus, 197',
+        email: 'recife@livingaround.com'
+    },
+    'Porto, Portugal': {
+        nome: 'Sede Living Around Porto',
+        endereco: 'Rua das Flores, 201',
+        email: 'porto@livingaround.com'
+    },
+    'Lisboa, Portugal': {
+        nome: 'Ponto de Encontro Chiado',
+        endereco: 'Largo do Chiado, 5',
+        email: 'lisboa@livingaround.com'
+    },
+};
+
 // FUNCAO PARA PREENCHER LISTA DE DESTINOS
 function atualizarCidades() {
     const selectPais = document.getElementById('select-pais');
@@ -28,41 +52,65 @@ function atualizarCidades() {
     }
 }
 
-// PARA CARREGAR MAPA NO IFRAME
+// PARA CARREGAR MAPA NO IFRAME E EXIBIR INFORMAÇÕES
 function abrirMapa() {
     const selectPais = document.getElementById('select-pais');
     const selectCidade = document.getElementById('select-cidade');
     const mapaFrame = document.getElementById('mapa-frame');
     
+    // NOVAS REFERÊNCIAS PARA AS INFORMAÇÕES
+    const mapaDiv = document.getElementById('map');
+    const infoContatoDiv = document.getElementById('info-contato');
+    const infoNomeSpan = document.getElementById('info-nome');
+    const infoEnderecoSpan = document.getElementById('info-endereco');
+    const infoEmailSpan = document.getElementById('info-email');
+    
     const pais = selectPais.value;
     const cidade = selectCidade.value;
+    const termoCompleto = `${cidade}, ${pais}`;
 
-    // VERIFICA SE O USUARIO REALMENTE ESCOLHEU UM PAIS E UMA CIDADE
+    // 1. VERIFICA SE O USUARIO REALMENTE ESCOLHEU UM PAIS E UMA CIDADE
     if (!pais || !cidade) {
         alert("Por favor, selecione um País e uma Cidade válidos.");
-        // Limpa o mapa se a seleção for inválida
+        // Oculta mapa e informações se a seleção for inválida
         mapaFrame.src = "about:blank"; 
+        mapaDiv.style.display = 'none'; 
+        infoContatoDiv.style.display = 'none';
         return; 
     }
     
-    // PESQUISA DESTINO E EXIBE NO MAPA UTILIZANDO A PESQUISA DO GOOGLE
-    const termoPesquisa = encodeURIComponent(`${cidade}, ${pais}`);
-
-    const urlFinal = `https://maps.google.com/maps?q=${termoPesquisa}&output=embed`;
+    // 2. PESQUISA DESTINO E EXIBE NO MAPA 
+    const termoPesquisa = encodeURIComponent(termoCompleto);
+    // URL DE INCORPORAÇÃO CORRETA (ASSUMINDO 'http://maps.google.com/maps?q=...' para embed)
+    const urlFinal = `https://maps.google.com/maps?q=${termoPesquisa}&output=embed`; 
 
     mapaFrame.src = urlFinal;
 
-    // ENCONTRA O ELEMENTO
-    var mapaDiv = document.getElementById('map');
-
-    // TORNA A DIV DO MAPA VISÍVEL
+    // 3. TORNA A DIV DO MAPA VISÍVEL
     mapaDiv.style.display = 'block';
+
+    // 4. PREENCHE E EXIBE AS INFORMAÇÕES DE CONTATO
+    const info = informacoesLocais[termoCompleto];
+
+    if (info) {
+        infoNomeSpan.textContent = info.nome;
+        infoEnderecoSpan.textContent = info.endereco;
+        infoEmailSpan.textContent = info.email;
+        infoContatoDiv.style.display = 'flex'; // Torna o bloco de informações visível
+    } else {
+        // Fallback caso o destino esteja na lista mas não nos detalhes (improável, mas seguro)
+        infoNomeSpan.textContent = "Informação não disponível";
+        infoEnderecoSpan.textContent = "N/A";
+        infoEmailSpan.textContent = "N/A";
+        infoContatoDiv.style.display = 'flex'; 
+    }
 }
 
 
-
-// FUNCAO PARA QUE O MAPA NAO APAREÇA LOGO QUE CARREGUE A PAGINA
+// FUNCAO PARA QUE O MAPA E O BLOCO DE INFO NAO APAREÇAM LOGO QUE CARREGUE A PAGINA
 document.addEventListener('DOMContentLoaded', () => {
+    // Apenas a chamada inicial de 'atualizarCidades()' para limpar e configurar o seletor.
+    // Ocultar os elementos é feito no CSS.
     atualizarCidades(); 
 });
 
