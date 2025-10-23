@@ -1,6 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Jura:wght@300..700&family=Titillium+Web&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Slab:ital,wght@0,100..700;1,100..700&family=Jura:wght@300..700&family=Titillium+Web&display=swap');
 
+@media (max-width: 575.98px) { /* Ponto de quebra 'sm' e abaixo */
+    /* Garante que o menu expandido no mobile tenha fundo branco para legibilidade */
+    #navbarNavAltMarkup {
+        background-color: rgba(255, 255, 255, 0.582) !important; /* Fundo branco forte para os links pretos */
+        padding: 10px; /* Adiciona um espaço interno para melhor visual */
+        border-radius: 5px;
+    }
+    
+    /* Opcional: Ajusta a cor do toggler (hambúrguer) se não estiver visível */
+    .navbar-toggler {
+        border-color: rgb(255, 255, 255); /* Adiciona uma borda sutil ao botão */
+    }
+}
+
 body {
     margin: 0px;
     padding-right: 0px;
@@ -20,6 +34,11 @@ h2{
     padding: 80px 70px 0px 100px;
 }
 
+.destaque{
+    color: rgba(104, 105, 49, 1);
+    font-weight: bold;
+}
+
 li{
     font-size: 20px;
 }
@@ -27,7 +46,7 @@ li{
 h4{
     font-family: "Jura", sans-serif;
     font-weight: bold;
-    font-size: 30px;
+    font-size: 35px;
     color: white;
 }
 
@@ -85,7 +104,7 @@ a {
 .titulo-index{
     font-family: "Josefin Slab", serif;
     font-weight: bold;
-    font-size: 75px;
+    font-size: 85px;
     color: white;
     text-align: center;
 }
@@ -104,6 +123,7 @@ a {
 #button1{
     font-family: "Jura", sans-serif;
     border-radius: 40px;
+    font-size: 25px;
     border-color: white;
     padding: 10px 40px 10px 40px ;
 }
@@ -111,6 +131,7 @@ a {
 #button2{
     font-family: "Jura", sans-serif;
     color: black;
+    font-size: 25px;
     border-radius: 40px;
     border-color: rgb(0, 0, 0);
     background-color: transparent;

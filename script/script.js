@@ -7,23 +7,23 @@ const destinosSuportados = {
 // NOVO: Informações Detalhadas para cada destino (Chave: "Cidade, País")
 const informacoesLocais = {
     'Rio de Janeiro, Brasil': {
-        nome: 'Living Around - RJ',
-        endereco: 'Rua da Alegria, 666 4000-789 - Rio de Janeiro',
+        nome: 'LIVING AROUND - RJ',
+        endereco: 'Rua da Alegria, 666<br>4000-789 - Rio de Janeiro', // AGORA COM <br>
         email: 'livingaround_rio@living.com'
     },
     'Recife, Brasil': {
-        nome: 'Living Around - PE',
-        endereco: 'Rua da Alegria, 666 4000-789 - Recife',
+        nome: 'LIVING AROUND - RECIFE',
+        endereco: 'Rua da Alegria, 666<br>4000-789 - Recife', // AGORA COM <br>
         email: 'livingaround_recife@living.com'
     },
     'Porto, Portugal': {
-        nome: 'Living Around - OPO',
-        endereco: 'Rua da Alegria, 666 4000-789 - Porto',
+        nome: 'LIVING AROUND - PORTO',
+        endereco: 'Rua da Alegria, 666<br>4000-789 - Porto',
         email: 'livingaround_porto@living.com'
     },
     'Lisboa, Portugal': {
-        nome: 'Living Around - LIS',
-        endereco: 'Rua da Alegria, 666 4000-789 - Lisboa',
+        nome: 'LIVING AROUND - LISBOA',
+        endereco: 'Rua da Alegria, 666<br>4000-789 - Lisboa', // AGORA COM <br>
         email: 'livingaround_porto@living.com'
     },
 };
@@ -94,7 +94,8 @@ function abrirMapa() {
 
     if (info) {
         infoNomeSpan.textContent = info.nome;
-        infoEnderecoSpan.textContent = info.endereco;
+        // <--- MUDANÇA AQUI: innerHTML para interpretar a tag <br>
+        infoEnderecoSpan.innerHTML = info.endereco; 
         infoEmailSpan.textContent = info.email;
         infoContatoDiv.style.display = 'flex'; // Torna o bloco de informações visível
     } else {
@@ -118,12 +119,13 @@ document.addEventListener('DOMContentLoaded', () => {
 // FUNCAO PARA VALIDAR EMAIL DO FORMULARIO E ENVIAR UM ALERTA APOS PREENCHIMENTO
 function validar(){
 
-        
+            
     var email=document.formulario.email.value;
-        const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!re.test(String(email).toLowerCase())) {
-            alert("Email Invalido.");
-            return false;
-        }
-        alert("Obrigado pelo preechimento do formulário.")
-        return true;}
+        const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!re.test(String(email).toLowerCase())) {
+            alert("Email Invalido.");
+            return false;
+        }
+        alert("Obrigado pelo preechimento do formulário.")
+        return true;
+}

@@ -44,47 +44,46 @@
   <!-- CONTAINER LOCAIS -->
    <!-- FORMULARIO COM SELETOR DE PAIS E CIDADE -->
       <div class="col-12 col-md-6 d-flex justify-content-center" style="margin-top: 75px;">
-        <div class="box" id="formulario-cidade">
-          <form onsubmit="return false;"> 
-            <div class="mb-3"> 
-              <p style="margin-top: 30px;">Escolha o país:</p>
-              <select class="form-select form-select-lg mb-3" id="select-pais" onchange="atualizarCidades()">
-              <option selected value="">País</option>
-              <option value="Brasil">Brasil</option>
-              <option value="Portugal">Portugal</option>
-              </select>
-            </div>
-
-            <div class="mb-3"> 
-              <p>Escolha a cidade:</p>
-              <select class="form-select form-select-lg mb-3" id="select-cidade">
-              <option selected value="">Cidade</option>
-              </select>
-            </div>
-
-            <div class="text-center mt-4">
-              <button type="button" id="button" onclick="abrirMapa()" style="margin-bottom: 30px; background-color: rgba(104, 105, 49, 1);
-;">Ver</button>
-            </div>            
-          </form>
-        </div>
+  <div class="box" id="formulario-cidade">
+    <form onsubmit="return false;">
+      <div class="mb-3">
+        <p style="margin-top: 30px;">Escolha o país:</p>
+        <select class="form-select form-select-lg mb-3" id="select-pais" onchange="atualizarCidades()">
+          <option selected value="">País</option>
+          <option value="Brasil">Brasil</option>
+          <option value="Portugal">Portugal</option>
+        </select>
       </div>
 
-<!-- CONTAINER DIREITA: mapa google -->
-<div class="col-12 col-md-6 d-flex justify-content-start" style="margin-top: 75px;">
-    
-    <div id="map" class="map-container" style="width: 100%; max-width: 450px; overflow: hidden;">
-        <iframe src="about:blank" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" id="mapa-frame" ></iframe>
-    </div>
+      <div class="mb-3">
+        <p>Escolha a cidade:</p>
+        <select class="form-select form-select-lg mb-3" id="select-cidade">
+          <option selected value="">Cidade</option>
+        </select>
+      </div>
 
-    <div id="info-contato" style="margin-top: 20px; max-width: auto;">
-        <div class="box" style="padding: 20px; font-size: 18px; text-align: left;">
-            <hr>
-            <span id="info-nome"></span></p>
-            <span id="info-endereco"></span></p>
-            <span id="info-email"></span></p>
-        </div>
+      <div class="text-center mt-4">
+        <button type="button" id="button" onclick="abrirMapa()"
+          style="margin-bottom: 30px; background-color: rgba(104, 105, 49, 1);">Ver</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<div class="col-12 col-md-6 d-flex flex-column align-items-center" style="margin-top: 75px;">
+
+  <div id="map" class="map-container w-100 mb-2" style="max-width: 450px; overflow: hidden;">
+    <iframe src="about:blank" width="100%" height="100%" style="border:0; aspect-ratio: 16/9;" allowfullscreen=""
+      loading="lazy" referrerpolicy="no-referrer-when-downgrade" id="mapa-frame"></iframe>
+  </div>
+
+  <div id="info-contato" class="w-100" style="max-width: 450px;"> 
+    <div class="box">
+      <p><span id="info-nome"></span></p>
+      <p><span id="info-endereco"></span></p>
+      <p><span id="info-email"></span></p>
     </div>
+  </div>
 </div>
 
     </div>

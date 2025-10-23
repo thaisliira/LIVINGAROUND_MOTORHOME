@@ -19,14 +19,7 @@
 }
 
 .map-container {
-    min-height: 450px; 
-    /* REMOVIDO: width: 50%; (Deixe o max-width do HTML gerenciar) */
-}
 
-.map-container {
-    min-height: 450px; 
-    /* REMOVER width: 50%; se ainda estiver aqui */
-    /* Adicionar overflow: hidden para cortar qualquer excesso */
     overflow: hidden; 
 }
 
@@ -39,10 +32,13 @@
 
 /* NOVO: Para ocultar o bloco de informações de contato */
 #info-contato {
+    text-align: left;
     display: none;
     font-family: "Jura", sans-serif;
     font-size: 25px;
     font-weight: bold;
     color: white;
-    background-color: black;
+    padding: 15px;
+    border-radius: 25px;
+    background-color: rgba(0, 0, 0, 0.51);
 }

@@ -39,7 +39,7 @@
     <!-- CONTAINER TOPO -->
  <!-- o px-0 remove o padding automatico do container-fluid -->
 <div class="container-fluid position-relative px-0 secao-principal">
-<div class="titulo position-absolute top-50 start-50 z-3 translate-middle w-100">
+<div class="titulo position-absolute top-50 start-50 z-2 translate-middle w-100">
     <h1 class="titulo-acomodacao" style="font-size: 60px;">O SEU NOVO OFFICE</h1>
 </div>
 </div>
@@ -47,7 +47,7 @@
 <!-- CONTAINER DOS CARDS -->
 
 <!-- CONTAINER CARD1 -->
-<div class="container-fluid cards py-0" style="background-color: rgba(180, 155, 44, 0.25);">
+<div class="container-fluid cards py-0 px-0" style="background-color: rgba(180, 155, 44, 0.25);">
   <div class="row align-items-center g-0" style="position: relative;">
     <div class="col-12 col-md-6 d-flex justify-content-center" style="margin-top: 75px; margin-bottom: 75px;">
       <div class="overlay-card1">
@@ -71,9 +71,7 @@
     <!-- Conteudo do modal -->
         <div class="modal-content">
         <img src="../imagens/pexels-liam-gant-619294-1426968 2-5.png" class="img-fluid" style="max-height: auto;">
-        <div class="modal-header">
         <h5 class="modal-title">Hippie Ride</h5>
-        </div>
         <div class="modal-body" style="text-align: justify;">
         <p>Imagine acordar com o som das ondas na praia, estacionar à beira de uma floresta serena ou partir numa viagem espontânea sem preocupações com hotéis ou horários. Alugar uma carrinha adaptada é sinónimo de liberdade, conforto e aventura - tudo em um só lugar!</p>
         <p>A nossa carrinha é a solução perfeita para viajantes que buscam autonomia e praticidade, sem abrir mão do essencial.</p>
@@ -95,7 +93,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-        <button type="button" class="btn btn-primary">Alugar</button>
+        <button type="button" id="button-alugar" class="btn btn-primary">Alugar</button>
       </div>
     </div>
   </div>
