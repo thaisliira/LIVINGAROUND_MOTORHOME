@@ -21,10 +21,10 @@ body {
 }
 
 nav {
-font-family: "Jura", sans-serif;
-  font-optical-sizing: auto;
-  font-size: 25px;
-  font-weight: bold;
+    font-family: "Jura", sans-serif;
+    font-optical-sizing: auto;
+    font-size: 25px;
+    font-weight: bold;
 }
 
 h2{

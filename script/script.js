@@ -4,16 +4,16 @@ const destinosSuportados = {
     'Portugal': ['Porto', 'Lisboa'],
 };
 
-// NOVO: Informações Detalhadas para cada destino (Chave: "Cidade, País")
+//INFORMACOES PARA CADA DESTINO
 const informacoesLocais = {
     'Rio de Janeiro, Brasil': {
         nome: 'LIVING AROUND - RJ',
-        endereco: 'Rua da Alegria, 666<br>4000-789 - Rio de Janeiro', // AGORA COM <br>
+        endereco: 'Rua da Alegria, 666<br>4000-789 - Rio de Janeiro',
         email: 'livingaround_rio@living.com'
     },
     'Recife, Brasil': {
         nome: 'LIVING AROUND - RECIFE',
-        endereco: 'Rua da Alegria, 666<br>4000-789 - Recife', // AGORA COM <br>
+        endereco: 'Rua da Alegria, 666<br>4000-789 - Recife',
         email: 'livingaround_recife@living.com'
     },
     'Porto, Portugal': {
@@ -23,7 +23,7 @@ const informacoesLocais = {
     },
     'Lisboa, Portugal': {
         nome: 'LIVING AROUND - LISBOA',
-        endereco: 'Rua da Alegria, 666<br>4000-789 - Lisboa', // AGORA COM <br>
+        endereco: 'Rua da Alegria, 666<br>4000-789 - Lisboa',
         email: 'livingaround_porto@living.com'
     },
 };
@@ -38,7 +38,7 @@ function atualizarCidades() {
     // LIMPA A LISTA E ADICIONA OPCAO PADRAO(PAIS/CIDADE)
     selectCidade.innerHTML = '<option selected value="">Cidade</option>'; 
     
-    // Verifica se um país válido foi selecionado
+    // VERIFICACAO SE UM PAIS/CIDADE VALIDOS FORAM SELECIONADOS
     if (paisSelecionado && destinosSuportados[paisSelecionado]) {
         const cidades = destinosSuportados[paisSelecionado];
 
@@ -72,7 +72,7 @@ function abrirMapa() {
     // 1. VERIFICA SE O USUARIO REALMENTE ESCOLHEU UM PAIS E UMA CIDADE
     if (!pais || !cidade) {
         alert("Por favor, selecione um País e uma Cidade válidos.");
-        // Oculta mapa e informações se a seleção for inválida
+
         mapaFrame.src = "about:blank"; 
         mapaDiv.style.display = 'none'; 
         infoContatoDiv.style.display = 'none';
@@ -81,7 +81,6 @@ function abrirMapa() {
     
     // 2. PESQUISA DESTINO E EXIBE NO MAPA 
     const termoPesquisa = encodeURIComponent(termoCompleto);
-    // URL DE INCORPORAÇÃO CORRETA (ASSUMINDO 'http://maps.google.com/maps?q=...' para embed)
     const urlFinal = `https://maps.google.com/maps?q=${termoPesquisa}&output=embed`; 
 
     mapaFrame.src = urlFinal;
@@ -94,24 +93,15 @@ function abrirMapa() {
 
     if (info) {
         infoNomeSpan.textContent = info.nome;
-        // <--- MUDANÇA AQUI: innerHTML para interpretar a tag <br>
         infoEnderecoSpan.innerHTML = info.endereco; 
         infoEmailSpan.textContent = info.email;
         infoContatoDiv.style.display = 'flex'; // Torna o bloco de informações visível
-    } else {
-        // Fallback caso o destino esteja na lista mas não nos detalhes (improável, mas seguro)
-        infoNomeSpan.textContent = "Informação não disponível";
-        infoEnderecoSpan.textContent = "N/A";
-        infoEmailSpan.textContent = "N/A";
-        infoContatoDiv.style.display = 'flex'; 
     }
 }
 
 
 // FUNCAO PARA QUE O MAPA E O BLOCO DE INFO NAO APAREÇAM LOGO QUE CARREGUE A PAGINA
 document.addEventListener('DOMContentLoaded', () => {
-    // Apenas a chamada inicial de 'atualizarCidades()' para limpar e configurar o seletor.
-    // Ocultar os elementos é feito no CSS.
     atualizarCidades(); 
 });
 
@@ -119,13 +109,13 @@ document.addEventListener('DOMContentLoaded', () => {
 // FUNCAO PARA VALIDAR EMAIL DO FORMULARIO E ENVIAR UM ALERTA APOS PREENCHIMENTO
 function validar(){
 
-            
-    var email=document.formulario.email.value;
-        const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!re.test(String(email).toLowerCase())) {
-            alert("Email Invalido.");
-            return false;
-        }
-        alert("Obrigado pelo preechimento do formulário.")
-        return true;
+    
+var email=document.formulario.email.value;
+const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!re.test(String(email).toLowerCase())) {
+    alert("Email Invalido.");
+    return false;
+    }
+    alert("Obrigado pelo preechimento do formulário.")
+    return true;
 }
