@@ -25,8 +25,8 @@ Overlay sections, background images and modal.
 Open your terminal or command prompt and execute the following commands to clone the project:
 
 ```bash 
-git clone https://github.com/thaisliira/livingaround.git
-cd livingaround
+[git clone https://github.com/thaisliira/LIVINGAROUND_MOTORHOME.git]
+cd LIVINGAROUND_MOTORHOME
 ```
 
 
