@@ -26,6 +26,8 @@ Open your terminal or command prompt and execute the following commands to clone
 
 ```bash 
 git clone https://github.com/thaisliira/LIVINGAROUND_MOTORHOME.git
+```
+```bash 
 cd LIVINGAROUND_MOTORHOME
 ```
 
