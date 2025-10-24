@@ -31,9 +31,13 @@ git clone https://github.com/thaisliira/LIVINGAROUND_MOTORHOME.git
 cd LIVINGAROUND_MOTORHOME
 ```
 
+## ✨ Author
+Thais Lira <br>
+<a href="https://www.linkedin.com/in/thaisrioss/" target="_blank">LinkedIn</a>
+
+### 💻 DEMO SITE
 [![Demo Live](https://img.shields.io/badge/Demo_Live-Ver_Site-0077B6?style=for-the-badge&logo=github)](https://thaisliira.github.io/LIVINGAROUND_MOTORHOME/index.html)
 
-#### DEMO SITE
 <div align="left">
   <a href="https://thaisliira.github.io/LIVINGAROUND_MOTORHOME/index.html" target="_blank">
     <img src="https://github.com/thaisliira/LIVINGAROUND_MOTORHOME/blob/main/living_around.gif">
