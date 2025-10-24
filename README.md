@@ -31,8 +31,7 @@ git clone https://github.com/thaisliira/LIVINGAROUND_MOTORHOME.git
 cd LIVINGAROUND_MOTORHOME
 ```
 
-## Demo
-https://thaisliira.github.io/LIVINGAROUND_MOTORHOME/index.html
+[![Demo Live](https://img.shields.io/badge/Demo_Live-Ver_Site-0077B6?style=for-the-badge&logo=github)](https://thaisliira.github.io/LIVINGAROUND_MOTORHOME/index.html)
 
 
 
