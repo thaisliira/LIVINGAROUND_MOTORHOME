@@ -69,7 +69,7 @@ function abrirMapa() {
     const cidade = selectCidade.value;
     const termoCompleto = `${cidade}, ${pais}`;
 
-    // 1. VERIFICA SE O USUARIO REALMENTE ESCOLHEU UM PAIS E UMA CIDADE
+    // VERIFICA SE O USUARIO REALMENTE ESCOLHEU UM PAIS E UMA CIDADE
     if (!pais || !cidade) {
         alert("Por favor, selecione um País e uma Cidade válidos.");
 
@@ -79,16 +79,16 @@ function abrirMapa() {
         return; 
     }
     
-    // 2. PESQUISA DESTINO E EXIBE NO MAPA 
+    // PESQUISA DESTINO E EXIBE NO MAPA 
     const termoPesquisa = encodeURIComponent(termoCompleto);
     const urlFinal = `https://maps.google.com/maps?q=${termoPesquisa}&output=embed`; 
 
     mapaFrame.src = urlFinal;
 
-    // 3. TORNA A DIV DO MAPA VISÍVEL
+    // TORNA A DIV DO MAPA VISÍVEL
     mapaDiv.style.display = 'block';
 
-    // 4. PREENCHE E EXIBE AS INFORMAÇÕES DE CONTATO
+    // PREENCHE E EXIBE AS INFORMAÇÕES DE CONTATO
     const info = informacoesLocais[termoCompleto];
 
     if (info) {
@@ -116,6 +116,6 @@ const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     alert("Email Invalido.");
     return false;
     }
-    alert("Obrigado pelo preechimento do formulário.")
+    alert("Seu formulário foi enviado com sucesso!")
     return true;
 }

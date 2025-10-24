@@ -1,17 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Jura:wght@300..700&family=Titillium+Web&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Slab:ital,wght@0,100..700;1,100..700&family=Jura:wght@300..700&family=Titillium+Web&display=swap');
 
-@media (max-width: 575.98px) { /* Ponto de quebra 'sm' e abaixo */
-    /* Garante que o menu expandido no mobile tenha fundo branco para legibilidade */
+@media (max-width: 575px) { /* Ponto de quebra 'sm' e abaixo */
+    /* FUNDO BRANCO PARA MENU DROPDOWN NO TELEMOVEL*/
     #navbarNavAltMarkup {
-        background-color: rgba(255, 255, 255, 0.582) !important; /* Fundo branco forte para os links pretos */
-        padding: 10px; /* Adiciona um espaço interno para melhor visual */
+        background-color: rgba(255, 255, 255, 0.582) !important; 
+        padding: 10px; 
         border-radius: 5px;
     }
     
-    /* Opcional: Ajusta a cor do toggler (hambúrguer) se não estiver visível */
+    /* AJUSTA A COR PARA TORNAR VISIVEL */
     .navbar-toggler {
-        border-color: rgb(255, 255, 255); /* Adiciona uma borda sutil ao botão */
+        border-color: rgb(255, 255, 255); 
+        color: white;
     }
 }
 
