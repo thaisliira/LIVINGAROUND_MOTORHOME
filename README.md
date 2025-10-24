@@ -34,9 +34,9 @@ cd LIVINGAROUND_MOTORHOME
 [![Demo Live](https://img.shields.io/badge/Demo_Live-Ver_Site-0077B6?style=for-the-badge&logo=github)](https://thaisliira.github.io/LIVINGAROUND_MOTORHOME/index.html)
 
 #### DEMO SITE
-<div align="middle">
+<div align="left">
   <a href="https://thaisliira.github.io/LIVINGAROUND_MOTORHOME/index.html" target="_blank">
-    <img src="https://github.com/thaisliira/LIVINGAROUND_MOTORHOME/blob/9185093168d136133e07a64b6e1082131c60e014/living_around.gif" width="480">
+    <img src="https://github.com/thaisliira/LIVINGAROUND_MOTORHOME/blob/main/living_around.gif">
   </a>
 </div>
 
