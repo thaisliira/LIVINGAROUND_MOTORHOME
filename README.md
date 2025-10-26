@@ -1,4 +1,4 @@
-# 🚐 Living Around: Campervan Rental Website
+# 🚐 Living Around: Campervan Website
 
 A responsive web application designed to promote and display campervan rental options. This project focuses on responsive UI design, interactive modals and modern layout techniques using Bootstrap 5, Javascript and custom CSS.
 
