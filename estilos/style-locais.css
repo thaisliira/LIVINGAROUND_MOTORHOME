@@ -19,18 +19,17 @@
 }
 
 .map-container {
-
     overflow: hidden; 
 }
 
 #mapa-frame {
-    /* Altura e Largura de 100% garantem o preenchimento do container (min-height: 450px e max-width: 450px) */
+    /* Altura e Largura de 100% garantem o preenchimento do container */
     height: 100%; 
     width: 100%; 
     border-radius: 10px; 
 }
 
-/* NOVO: Para ocultar o bloco de informações de contato */
+/* Para ocultar o bloco de informações de contato */
 #info-contato {
     text-align: left;
     display: none;
